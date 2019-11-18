@@ -1,0 +1,409 @@
+Year,State,AvgObesity
+2011,Alaska,29.42
+2012,Alaska,23.46
+2013,Alaska,30.78
+2014,Alaska,31.02
+2015,Alaska,29.7
+2016,Alaska,32.88
+2017,Alaska,34.38
+2018,Alaska,29.2
+2011,Alabama,31.84
+2012,Alabama,27.95
+2013,Alabama,36.33
+2014,Alabama,34.14
+2015,Alabama,37.84
+2016,Alabama,34.02
+2017,Alabama,39.52
+2018,Alabama,34.3
+2011,Arkansas,26.64
+2012,Arkansas,38.9
+2013,Arkansas,35.04
+2014,Arkansas,42.72
+2015,Arkansas,35.58
+2016,Arkansas,34.38
+2017,Arkansas,36.48
+2018,Arkansas,39.94
+2011,Arizona,24.97
+2012,Arizona,28.33
+2013,Arizona,30.7
+2014,Arizona,29.13
+2015,Arizona,27.93
+2016,Arizona,30.43
+2017,Arizona,30.34
+2018,Arizona,30.17
+2011,California,25.84
+2012,California,25.59
+2013,California,28.15
+2014,California,25.71
+2015,California,24.47
+2016,California,27.4
+2017,California,28.11
+2018,California,27.53
+2011,Colorado,23.5
+2012,Colorado,23.19
+2013,Colorado,22.45
+2014,Colorado,23.01
+2015,Colorado,19.79
+2016,Colorado,25.06
+2017,Colorado,22.1
+2018,Colorado,25.09
+2011,Connecticut,26.8
+2012,Connecticut,27.47
+2013,Connecticut,24.48
+2014,Connecticut,27.23
+2015,Connecticut,26.99
+2016,Connecticut,27.27
+2017,Connecticut,26.18
+2018,Connecticut,27.15
+2011,District of Columbia,19.45
+2012,District of Columbia,21.4
+2013,District of Columbia,17.12
+2014,District of Columbia,20.84
+2015,District of Columbia,18.75
+2016,District of Columbia,20.66
+2017,District of Columbia,18.48
+2018,District of Columbia,22.58
+2011,Delaware,25.28
+2012,Delaware,23.64
+2013,Delaware,25.85
+2014,Delaware,27.36
+2015,Delaware,33.5
+2016,Delaware,26.76
+2017,Delaware,28.4
+2018,Delaware,34.2
+2011,Florida,23.93
+2012,Florida,24.92
+2013,Florida,26.39
+2014,Florida,24.78
+2015,Florida,22.12
+2016,Florida,27.4
+2017,Florida,27.84
+2018,Florida,30.04
+2011,Georgia,22.99
+2012,Georgia,25.85
+2013,Georgia,30.1
+2014,Georgia,24.3
+2015,Georgia,25.86
+2016,Georgia,25.2
+2017,Georgia,30.6
+2018,Georgia,27.05
+2011,Hawaii,27.17
+2012,Hawaii,30.16
+2013,Hawaii,29.62
+2014,Hawaii,30.57
+2015,Hawaii,30.12
+2016,Hawaii,30.37
+2017,Hawaii,29.97
+2018,Hawaii,30.82
+2011,Iowa,25.38
+2012,Iowa,31.1
+2013,Iowa,38.53
+2014,Iowa,24.18
+2015,Iowa,32.3
+2016,Iowa,27.33
+2017,Iowa,34.64
+2018,Iowa,36.66
+2011,Idaho,31.33
+2012,Idaho,31.88
+2013,Idaho,38.58
+2014,Idaho,33.7
+2015,Idaho,31.7
+2016,Idaho,36.13
+2017,Idaho,33.7
+2018,Idaho,30
+2011,Illinois,25.68
+2012,Illinois,24.36
+2013,Illinois,27.2
+2014,Illinois,26.5
+2015,Illinois,27.88
+2016,Illinois,27.64
+2017,Illinois,26.4
+2018,Illinois,29.78
+2011,Indiana,37.94
+2012,Indiana,32.3
+2013,Indiana,32.7
+2014,Indiana,30.83
+2015,Indiana,27.8
+2016,Indiana,31.4
+2017,Indiana,31.17
+2018,Indiana,36.54
+2011,Kansas,29.76
+2012,Kansas,30.35
+2013,Kansas,29.74
+2014,Kansas,30.97
+2015,Kansas,34.78
+2016,Kansas,30.33
+2017,Kansas,31.15
+2018,Kansas,35.17
+2011,Kentucky,35.52
+2012,Kentucky,32.92
+2013,Kentucky,36
+2014,Kentucky,30.74
+2015,Kentucky,30.5
+2016,Kentucky,32.4
+2017,Kentucky,33.54
+2018,Kentucky,32.6
+2011,Louisiana,32.58
+2012,Louisiana,32.03
+2013,Louisiana,32.73
+2014,Louisiana,34.45
+2015,Louisiana,33.6
+2016,Louisiana,37.14
+2017,Louisiana,39.06
+2018,Louisiana,37.12
+2011,Massachusetts,26.37
+2012,Massachusetts,23.87
+2013,Massachusetts,25.76
+2014,Massachusetts,24.49
+2015,Massachusetts,25.48
+2016,Massachusetts,24.08
+2017,Massachusetts,26.76
+2018,Massachusetts,26.67
+2011,Maryland,24.23
+2012,Maryland,26.06
+2013,Maryland,25.24
+2014,Maryland,28.93
+2015,Maryland,28.37
+2016,Maryland,29.09
+2017,Maryland,28.54
+2018,Maryland,31.57
+2011,Maine,26.42
+2012,Maine,30.23
+2013,Maine,29.05
+2014,Maine,28.2
+2015,Maine,27.48
+2016,Maine,34.55
+2017,Maine,32.83
+2018,Maine,32
+2011,Michigan,31.37
+2012,Michigan,31.35
+2013,Michigan,29.27
+2014,Michigan,30.17
+2015,Michigan,30.67
+2016,Michigan,32.07
+2017,Michigan,31.27
+2018,Michigan,30.61
+2011,Minnesota,28.1
+2012,Minnesota,27.6
+2013,Minnesota,26.81
+2014,Minnesota,29.88
+2015,Minnesota,25.83
+2016,Minnesota,30.28
+2017,Minnesota,31.85
+2018,Minnesota,33.42
+2011,Missouri,33.18
+2012,Missouri,35.33
+2013,Missouri,34.03
+2014,Missouri,31.4
+2015,Missouri,32.46
+2016,Missouri,29.9
+2017,Missouri,28.23
+2018,Missouri,44.5
+2011,Mississippi,33.47
+2012,Mississippi,28.7
+2013,Mississippi,36.3
+2014,Mississippi,37.9
+2015,Mississippi,37.35
+2016,Mississippi,34.87
+2017,Mississippi,37.6
+2018,Mississippi,41
+2011,Montana,27.72
+2012,Montana,30.13
+2013,Montana,34.13
+2014,Montana,32.15
+2015,Montana,28.58
+2016,Montana,29.02
+2017,Montana,32.85
+2018,Montana,30.55
+2011,North Carolina,25.79
+2012,North Carolina,29.66
+2013,North Carolina,27.58
+2014,North Carolina,28.73
+2015,North Carolina,28.42
+2016,North Carolina,30.67
+2017,North Carolina,33.44
+2018,North Carolina,40
+2011,North Dakota,35.87
+2012,North Dakota,36.5
+2013,North Dakota,33.63
+2014,North Dakota,37.87
+2015,North Dakota,37.47
+2016,North Dakota,37.98
+2017,North Dakota,37.48
+2018,North Dakota,37.38
+2011,Nebraska,27.83
+2012,Nebraska,28.79
+2013,Nebraska,29.77
+2014,Nebraska,35.95
+2015,Nebraska,32.05
+2016,Nebraska,31.35
+2017,Nebraska,31.82
+2018,Nebraska,33.32
+2011,New Hampshire,25.1
+2012,New Hampshire,19.15
+2013,New Hampshire,24.6
+2014,New Hampshire,22.48
+2015,New Hampshire,20.95
+2016,New Hampshire,21.78
+2017,New Hampshire,24.13
+2018,New Hampshire,26.87
+2011,New Jersey,22.81
+2012,New Jersey,22.74
+2013,New Jersey,28.8
+2014,New Jersey,26.06
+2015,New Jersey,27.47
+2016,New Jersey,26.26
+2017,New Jersey,29.13
+2018,New Jersey,24.7
+2011,New Mexico,20.96
+2012,New Mexico,25.06
+2013,New Mexico,25.14
+2014,New Mexico,30.29
+2015,New Mexico,31.58
+2016,New Mexico,31.26
+2017,New Mexico,29
+2018,New Mexico,32.34
+2011,Nevada,27.97
+2012,Nevada,25.7
+2013,Nevada,27.37
+2014,Nevada,27.73
+2015,Nevada,24
+2016,Nevada,25.84
+2017,Nevada,32.93
+2018,Nevada,27.94
+2011,New York,25.68
+2012,New York,24.78
+2013,New York,23.98
+2014,New York,25.14
+2015,New York,25.8
+2016,New York,25.46
+2017,New York,23.9
+2018,New York,28.46
+2011,Ohio,27.7
+2012,Ohio,27.54
+2013,Ohio,29.44
+2014,Ohio,31.81
+2015,Ohio,31.28
+2016,Ohio,36.73
+2017,Ohio,31.4
+2018,Ohio,28.98
+2011,Oklahoma,30.37
+2012,Oklahoma,30.9
+2013,Oklahoma,31.88
+2014,Oklahoma,30.52
+2015,Oklahoma,36.42
+2016,Oklahoma,32.08
+2017,Oklahoma,34.18
+2018,Oklahoma,31.1
+2011,Oregon,27.08
+2012,Oregon,25.18
+2013,Oregon,25.1
+2014,Oregon,22.28
+2015,Oregon,28.1
+2016,Oregon,25.68
+2017,Oregon,29.17
+2018,Oregon,31.28
+2011,Pennsylvania,27.4
+2012,Pennsylvania,26.25
+2013,Pennsylvania,27.18
+2014,Pennsylvania,28.72
+2015,Pennsylvania,30.54
+2016,Pennsylvania,29.04
+2017,Pennsylvania,30.22
+2018,Pennsylvania,26.58
+2011,Rhode Island,24.94
+2012,Rhode Island,20.7
+2013,Rhode Island,28.37
+2014,Rhode Island,24.65
+2015,Rhode Island,23.88
+2016,Rhode Island,24.6
+2017,Rhode Island,25.53
+2018,Rhode Island,28.22
+2011,South Carolina,29.66
+2012,South Carolina,31.37
+2013,South Carolina,30.83
+2014,South Carolina,26.88
+2015,South Carolina,27.58
+2016,South Carolina,32.06
+2017,South Carolina,34.1
+2018,South Carolina,32.6
+2011,South Dakota,34.15
+2012,South Dakota,29.25
+2013,South Dakota,30.63
+2014,South Dakota,37.4
+2015,South Dakota,32.6
+2016,South Dakota,32.38
+2017,South Dakota,39.38
+2018,South Dakota,36.48
+2011,Tennessee,30.28
+2012,Tennessee,31.1
+2013,Tennessee,36.7
+2014,Tennessee,36.4
+2015,Tennessee,35.5
+2016,Tennessee,40.2
+2017,Tennessee,33.04
+2018,Tennessee,38.93
+2011,Texas,31.22
+2012,Texas,26.02
+2013,Texas,27.72
+2014,Texas,30.1
+2015,Texas,28.83
+2016,Texas,28.3
+2017,Texas,32.47
+2018,Texas,31.89
+2011,Utah,25.93
+2012,Utah,21.01
+2013,Utah,24.17
+2014,Utah,25.52
+2015,Utah,29.41
+2016,Utah,25.05
+2017,Utah,24.34
+2018,Utah,32.43
+2011,Virginia,27.64
+2012,Virginia,26.83
+2013,Virginia,26.16
+2014,Virginia,27.52
+2015,Virginia,27.62
+2016,Virginia,32.02
+2017,Virginia,26.62
+2018,Virginia,29.52
+2011,Vermont,28.65
+2012,Vermont,26.57
+2013,Vermont,29.93
+2014,Vermont,25.85
+2015,Vermont,30.2
+2016,Vermont,29.06
+2017,Vermont,30.58
+2018,Vermont,26.66
+2011,Washington,29.1
+2012,Washington,28.03
+2013,Washington,29.36
+2014,Washington,27.49
+2015,Washington,25.64
+2016,Washington,29.9
+2017,Washington,29.2
+2018,Washington,30.35
+2011,Wisconsin,32.48
+2012,Wisconsin,33.45
+2013,Wisconsin,34.12
+2014,Wisconsin,38.2
+2015,Wisconsin,36.72
+2016,Wisconsin,34.48
+2017,Wisconsin,32.57
+2018,Wisconsin,37.8
+2011,West Virginia,34.4
+2012,West Virginia,33.78
+2013,West Virginia,35.95
+2014,West Virginia,39.2
+2015,West Virginia,38.2
+2016,West Virginia,42.2
+2017,West Virginia,44.6
+2018,West Virginia,39.37
+2011,Wyoming,27.15
+2012,Wyoming,28.58
+2013,Wyoming,30.2
+2014,Wyoming,29.16
+2015,Wyoming,34.63
+2016,Wyoming,28.2
+2017,Wyoming,31.93
+2018,Wyoming,31.15
