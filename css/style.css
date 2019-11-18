@@ -1,0 +1,79 @@
+.land{
+    fill: grey;
+}
+
+body{
+    background-color: lightgray;
+}
+
+h4{
+    text-align: center;
+}
+
+#stats{
+  position: absolute;
+  right: 100px;
+  top: 200px;
+  text-align: right;
+}
+
+.end{
+    font-style: italic;
+}
+
+/* On mouse hover, lighten state color */
+path:hover {
+	fill-opacity: .7;
+}
+
+#form-control{
+  text-align: center;
+}
+
+/*
+#chart-area{
+  text-align: center;
+}*/
+
+.select-control {
+  background: #E2DDD1;
+  border: 1px solid #D49999;
+  width: 175px;
+  font-size: 12px;
+}
+.select-control:focus {
+    border: 1px solid #D49999;
+}
+
+.form label {
+  /* font-weight: 400; */
+  padding-top:5px;
+  color:#8E7060;
+  margin-right: 15px;
+}
+
+  /* Legend Position Style */
+.legend {
+	position:absolute;
+	left:20px;
+	top:300px;
+}
+
+.axis line, .axis path {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(43,43,43, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.selected {
+  fill: red;
+}
+
