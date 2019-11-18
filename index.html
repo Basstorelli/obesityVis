@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <title>Obesity</title>
+        <link rel="stylesheet" href="css/milligram.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Obesity (High-Fidelity)</h1>
+        <h4>Here we display the average % of population obese per state by year.</h4>
+        <div id="form-control">
+            <form class="form">
+                <label for="year">Change Year</label>
+                <select id="year" class="select-control">
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                </select>
+            </form>
+        </div>
+        <div id="stats">
+            <h3>Click on a State to fill in its data</h3>
+            <br/>
+            
+        </div>
+        
+
+        <div id="chart-area"></div>
+        <div id="legend-area"></div>
+        <br/>
+        <h5>Fast food restaurants continue to grow in number in the US as time goes on</h4>
+        <div id="vega-area"></div>
+        
+        <p>(Data taken from the Behavioral Risk Factor Surveillance System and the IBIS World Industry Report)</p>
+        <script src="js/d3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.7.2"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.10"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/vega-embed@5.1.3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+        <script src="js/topojson.min.js"></script>
+        <script src="js/geo.js"></script>
+        <script src="js/helper.js"></script>
+        
+    </body>
+</html>
