@@ -7,35 +7,26 @@ let restSpec = {
     hconcat: [
         {
             title: "Number of Fast Food Restaurants",
-            titleColor: "green",
-            mark: 'bar',
+            mark: {type: 'line', point: true},
             width: 500,
             encoding: {
-                x: {field: "Year", type: "nominal", axis: {title:  "Year"}, sort: "y"},
-                y: {field: "NumberRest", type: "quantitative", axis: {title: "Number of Restaurants"}},
-                color: {
-                    field: "NumMC", 
-                    type: "quantitative",
-                    legend: null,
-                    scale: {range: ['#ebaef2', '#b55ebf']}
-                }
+                x: {field: "Year", type: "temporal", axis: {title:  "Year"}, sort: "y"},
+                y: {field: "NumberRest", type: "quantitative", 
+                        axis: {title: "Number of Restaurants"}, scale: {domain: [220000, 250000]}},
+                color: {value: "#BD8BC3"}
             }
         },
         {
             title: "Number of McDonald's In the US",
-            mark: "bar",
+            mark: {type: 'line', point: true},
             width: 500,
-            color: "#D3D3D3",
             encoding: {
-                x: {field: "Year", type: "nominal", axis: {title:  "Year"}, sort: "y"},
-                y: {field: "NumMC", type: "quantitative", axis: {title: "Number of McDonalds",}},
-                color: {
-                    field: "NumMC", 
-                    type: "quantitative",
-                    legend: null,
-                    scale: {range: ['#ebaef2', '#b55ebf']}
-                }
+                x: {field: "Year", type: "temporal", axis: {title:  "Year"}, sort: "y"},
+                y: {field: "NumMC", type: "quantitative", 
+                        axis: {title: "Number of McDonalds",}, scale: {domain: [32000, 39000]}},
+                color: {value: "#BD8BC3"}
             }
+            
         }
     ]
 };

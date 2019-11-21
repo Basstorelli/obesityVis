@@ -31,12 +31,16 @@ Promise.all([
     updateMap();
 });
 
+let tempSVG = d3.selectAll
+
 //tip 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
-  .offset([-5, 0])
+  .offset([-200, 200])
+  .html("<p id = 'sName'></p><p id = 'obsty'></p><p id = 'ass'></p><div id='chartImbed'></div><p id = 'leg'></p>");
 
 svg.call(tip);
+
 
 // Add Event Listener (ranking type)
 document.querySelector('#year').addEventListener("change", updateMap);
@@ -64,7 +68,7 @@ function updateMap(){
 
     //d3 projection
     let projection = d3.geoAlbersUsa() 
-        .scale(1250)
+        .scale(1300)
         .translate([width / 2, height / 2]);
 
     //path generator
@@ -91,13 +95,6 @@ function updateMap(){
         }
     }
 
-
-    //append div for tooltip to svg
-    let div = d3.select("body")
-        .append("div")   
-        .attr("class", "tooltip")               
-        .style("opacity", 0);
-
     //bind data to svg, one path per geojson featuer
     let map = svg.selectAll("path")
         .data(topology.features, function(d){
@@ -108,9 +105,41 @@ function updateMap(){
         .attr("d", path)
         .style("stroke", "#fff")
         .style("stroke-width", "1")
-        .on('mouseover', tip.show)
+        .on('mouseover.tip', tip.show)
+        .on('mouseover.fact', function(d){
+            current = d3.select(this)._groups[0][0].__data__.properties.name;
+            currVal = d3.select(this)._groups[0][0].__data__.properties.value;
+            let stackChart = {
+                $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+                data: {"url" : "data/DataByState/DataByState - "+current+".csv"},
+                background: "#D3D3D3",
+                layer: [
+                    {                  
+                    mark: "bar",
+                    encoding: {
+                        x: {"field": "Year", "type": "ordinal"},
+                        y: {field: "PopulationTotal", type: "quantitative", axis: {title:  "Population"}},
+                        color: {value: "#c2a030 "},
+                        opacity: {"value": 0.7}
+                      }
+                    },
+                    {
+                      mark: "bar",
+                      encoding: {
+                        x: {"field": "Year", "type": "ordinal"},
+                        y: {field: "PopulationObese", type: "quantitative"},
+                        color: {value: "#b55ebf"},
+                      }
+                    },
+            
+                ]
+            };
+            vegaEmbed('#chartImbed', stackChart);
+            document.getElementById("sName").textContent = "Selected state: " + current;
+            document.getElementById("obsty").textContent = currVal + "% obese in " + sortType;
+            document.getElementById("leg").textContent = "Total Pop&emspObese Pop";
+        })
         .on('mouseout', tip.hide)
-        .on("click", selected)
         .style("fill", function(d) { 
             return ramp(d.properties.value) 
         })
@@ -119,65 +148,51 @@ function updateMap(){
         .transition()
         //.style("opacity", 1)
         .duration(1000)
-        tip.html(function(d) {
-            return d.properties.name + " : " +
-                d.properties.value + "% obese";
-        })
+        
+
+
 
     map.exit().remove();
 
-         //legend creation
-    let legW = 140, legH = 300;
-    let legKey = d3.select("#legend-area")
-        .append("svg")
-        .attr("width", legW)
-        .attr("height", legH)
-        .attr("class", "legend");
-    let linGrad = legKey.append("defs")
-        .append("linearGradient")
-        .attr("id", "gradient")
-        .attr("x1", "100%")
-        .attr("y1", "0%")
-        .attr("x2", "100%")
-        .attr("y2", "100%")
-        .attr("spreadMethod", "pad");
-    linGrad.append("stop")
-        .attr("offset", "0%")
-        .attr("stop-color", highColor);
-    linGrad.append("stop")
-        .attr("offset", "100%")
-        .attr("stop-color", lowColor);
+ 
+    //legend creation
+    svg.append("g")
+    .attr("class", "legend")
+    .attr("transform", "translate(20,80)");
 
-    legKey.append("rect")
-        .attr("width", legW - 100)
-        .attr("height", legH)
-        .style("fill", "url(#gradient)")
-        .attr("transform", "translate(0,10)");
-    let y = d3.scaleLinear()
-        .range([legH, 0])
-        .domain([minVal + 1, maxVal]);
-    let yAxis = d3.axisRight()
-        .scale(y);
-    legKey.append("g")
-        .attr("class", "y axis")
-        .attr("transform", "translate(41,10)")
-			.call(yAxis);
+    var nums = ["20%", "24%", "28%", "32%", "36%", "40%", "44%", "48%"];
+    var colors = ["#EACEED", "#DBB8DF", "#CCA1D1", "#BD8BC3",
+                "#AE75B4", "#9F5FA6", "#904898", "#81328A"]
+
+    var ordinal = d3.scaleOrdinal()
+    .domain(nums)
+    .range(colors);
+
+    var legendOrdinal = d3.legendColor()
+    .scale(ordinal)
+    .shapePadding(10)
+    .shapeWidth(25)
+    .shapeHeight(25)
+    .labelOffset(10)
+
+    svg.select(".legend")
+    .call(legendOrdinal);
 }
 
-function selected(){
-
+/*
+function selected(d){
     if (stateCount == 0) {
-        // if (d3.select(this).style('fill') == "red") {
+         if (d3.select(this).style('fill') == "red") {
 
-            d3.select(this).style('fill', "black");
+            d3.select(this).style('fill', "606c76");
             stateToChange = d3.select(this);
             stateCount += 1;
             selectedState = stateToChange._groups[0][0].__data__.properties.name
-            showData(selectedState);
-            //console.log(stateToChange._groups[0][0].__data__.properties.name)
+            genChart(selectedState);
+            console.log(stateToChange._groups[0][0].__data__.properties.name)
     } 
     else {
-        // if (d3.select(this).style('fill') == "red") {
+        if (d3.select(this).style('fill') == "red") {
         console.log(stateToChange);
         stateToChange.style('fill', function(d) { 
             stateCount = 0;
@@ -187,8 +202,11 @@ function selected(){
         selectedState = null;
     }
 }
+*/
 
+/*
 function showData(state){
+    console.log(state);
     for (let i = 0; i < stats.length; i++){
         if (stats[i].State === state){
 
@@ -218,11 +236,67 @@ function showData(state){
 
             d3.select("#rank").remove();
             d3.select("#stats")
-            .append("p")
-            .attr("id", "rank")
-            .text("Obesity Rank Out of 51: " + stats[i].RankObese2015)
+                .append("p")
+                .attr("id", "rank")
+                .text("Obesity Rank Out of 51: " + stats[i].RankObese2015)
+
+            d3.select("#stackedChart").remove();
+            d3.select("#stats")
+                .append("div")
+                .attr("id", "stackedChart")
+
+
+
+
+                
             
         }
     }
-}
+}*/
+
+/*
+function genChart(state){
+    //static bar charts at the bottom
+    let stackChart = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {"url" : "data/DataByState/DataByState - "+state+".csv"},
+        background: "#D3D3D3",
+        layer: [
+            {                  
+             mark: "bar",
+            encoding: {
+                x: {"field": "Year", "type": "ordinal"},
+                y: {field: "PopulationTotal", type: "quantitative", axis: {title:  "Population"}},
+                color: {value: "#b55ebf"},
+    
+                
+                // color: {
+                //   field: "PopulationObese", "type": "quantitative",
+                //   scale: {"range": ["#e377c2", "#1f77b4"]}
+                // },
+                opacity: {"value": 0.7}
+              }
+            },
+    
+            {
+              mark: "bar",
+              encoding: {
+                x: {"field": "Year", "type": "ordinal"},
+                y: {field: "PopulationObese", type: "quantitative"},
+                color: {value: "#606c76"},
+    
+                
+                // color: {
+                //   field: "PopulationObese", "type": "quantitative",
+                //   scale: {"range": ["#e377c2", "#1f77b4"]}
+                // },
+    
+              }
+            },
+    
+        ]
+    
+    };
+    vegaEmbed('#stats', stackChart);
+}*/
 
