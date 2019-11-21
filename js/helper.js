@@ -7,7 +7,7 @@ let restSpec = {
     hconcat: [
         {
             title: "Number of Fast Food Restaurants",
-            mark: {type: 'line', point: true},
+            mark: {type: 'line', point: true, tooltip: true},
             width: 500,
             encoding: {
                 x: {field: "Year", type: "temporal", axis: {title:  "Year"}, sort: "y"},
@@ -18,7 +18,7 @@ let restSpec = {
         },
         {
             title: "Number of McDonald's In the US",
-            mark: {type: 'line', point: true},
+            mark: {type: 'line', point: true, tooltip: true},
             width: 500,
             encoding: {
                 x: {field: "Year", type: "temporal", axis: {title:  "Year"}, sort: "y"},
