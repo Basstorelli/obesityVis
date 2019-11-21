@@ -10,12 +10,6 @@ h4{
     text-align: center;
 }
 
-#stats{
-  position: absolute;
-  right: 100px;
-  top: 200px;
-  text-align: right;
-}
 
 .end{
     font-style: italic;
@@ -30,10 +24,10 @@ path:hover {
   text-align: center;
 }
 
-/*
-#chart-area{
+
+#outer, #stats{
   text-align: center;
-}*/
+}
 
 .select-control {
   background: #E2DDD1;
