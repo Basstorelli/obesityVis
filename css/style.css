@@ -2,12 +2,21 @@
     fill: grey;
 }
 
+.story{
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
 body{
     background-color: lightgray;
 }
 
-h4{
+h1, h4{
     text-align: center;
+}
+
+.quote{
+  font-style:italic;
 }
 
 
@@ -35,6 +44,21 @@ path:hover {
   width: 175px;
   font-size: 12px;
 }
+
+.select-control2{
+  background: #E2DDD1;
+  border: 1px solid #D49999;
+  width: 400px;
+  font-size: 12px;
+}
+
+.select-control3 {
+  background: #E2DDD1;
+  border: 1px solid #D49999;
+  width: 200px;
+  font-size: 12px;
+}
+
 .select-control:focus {
     border: 1px solid #D49999;
 }
@@ -61,6 +85,14 @@ path:hover {
 
 .d3-tip {
   line-height: 1;
+  padding: 1px;
+  background: rgba(43,43,43, 0.8);
+  color: #fff;
+  border-radius: 1px;
+}
+
+.d3-stip {
+  line-height: 1;
   padding: 12px;
   background: rgba(43,43,43, 0.8);
   color: #fff;
@@ -69,5 +101,13 @@ path:hover {
 
 .selected {
   fill: red;
+}
+
+#leg1{
+  color: #c2a030;
+}
+
+#leg2{
+  color: #b55ebf;
 }
 
