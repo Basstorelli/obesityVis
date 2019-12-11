@@ -31,13 +31,11 @@ Promise.all([
     updateMap();
 });
 
-let tempSVG = d3.selectAll
-
 //tip 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
-  .offset([-200, 200])
-  .html("<p id = 'sName'></p><p id = 'obsty'></p><p id = 'ass'></p><div id='chartImbed'></div><p id = 'leg'></p>");
+  .offset([-150, 80])
+  .html("<p id = 'sName'></p><p id = 'obsty'></p></p><div id='chartImbed'></div><p id = 'leg1'></p><p id ='leg2'></p>");
 
 svg.call(tip);
 
@@ -79,7 +77,7 @@ function updateMap(){
     // Get the selected ranking option
 	var sortType = document.querySelector('#year').value;
 
-
+    //change each path's value based on selected year
     for (let i = 0; i < obesity.length; i++){
         if (obesity[i].Year == parseInt(sortType, 10)){ //placeholder for now
             //current state in our csv
@@ -137,28 +135,27 @@ function updateMap(){
             vegaEmbed('#chartImbed', stackChart);
             document.getElementById("sName").textContent = "Selected state: " + current;
             document.getElementById("obsty").textContent = currVal + "% obese in " + sortType;
-            document.getElementById("leg").textContent = "Total Pop&emspObese Pop";
+            document.getElementById("leg1").textContent = "Non-Obese Population";
+            document.getElementById("leg2").textContent = "Obese Population";
         })
         .on('mouseout', tip.hide)
         .style("fill", function(d) { 
             return ramp(d.properties.value) 
         })
         .merge(map)
-        //.style("opacity", 0.5)
-        .transition()
-        //.style("opacity", 1)
-        .duration(1000)
-        
-
-
-
     map.exit().remove();
 
  
     //legend creation
-    svg.append("g")
+
+    legendSide = svg.append("g")
     .attr("class", "legend")
     .attr("transform", "translate(20,80)");
+
+    legendSide.append("text")
+        .attr("x", 0)
+        .attr("y", -15)
+        .text("% Obese");
 
     var nums = ["20%", "24%", "28%", "32%", "36%", "40%", "44%", "48%"];
     var colors = ["#EACEED", "#DBB8DF", "#CCA1D1", "#BD8BC3",
