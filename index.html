@@ -6,38 +6,153 @@
         <title>Obesity</title>
         <link rel="stylesheet" href="css/milligram.min.css">
         <link rel="stylesheet" href="css/style.css">
+
     </head>
     <body>
-        <h1>Obesity (High-Fidelity)</h1>
-        <div id="stats">
-            <h3>Hover over a State to fill in its data</h3>
-        </div>
-        <div id="form-control">
-            <form class="form">
-                <label for="year">Change Year</label>
-                <select id="year" class="select-control">
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                </select>
-            </form>
-        </div>
+        <div >
+            <h1 class=""><b>An Insight into American Obesity</b></h1>
+            <div id="stats">
+                <h4><b>Obesity is a national epidemic in the United States.</b></bObesity></h4>
+                <h5>
+                    In 2018, 35% of the US population had an overweight classification, meaning they are overweight, obese or highly obese.</br>
+                    Studies and surveys have proven that obesity is closely linked with many health risks, such as diabetes, heart disease, high blood pressure and stroke.<br/>
+                    While almost one-third of Americans overweight, the statistics are very different when broken down on a state-level. Click on a state to find out more about it.
+                </h5>
+            </div>
+            <div id="form-control">
+                <form class="form">
+                    <label for="year">Change Year</label>
+                    <select id="year" class="select-control">
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </form>
+            </div>
         <div id="outer">
-            
 
             <div id="chart-area"></div>
             <div id="legend-area"></div>
-            <br/>
-            <h5>Fast food restaurants continue to grow in number in the US as time goes on</h4>
+
+            <hr/>
+           
+            <h3><b>Making Healthy Choices</b></h3>
+            <p class="story">
+                    There are many racial and ethnic disparities on a national level when it comes to obesity and the factors that affect it. 
+                    Looking at data from 2017, Non-Hispanic Black, Hispanic and American Indian folks have an obese classification at disproportionately higher rates than their White and Asian counterparts. 
+                    Along with this, 33% of Hispanic people and 24% of Non-Hispanic Black people report to eat vegetables less than one time daily, in comparison to 15% by White and Asian folks. 
+                    A healthy diet that is rich in vegetables and complex nutrients is a key factor in preventing obesity. 
+                    Fitness and exercise have also been proven to reduce obesity and many of its health risks, especially heart disease. 
+                    We see here that the populations with the highest rates of obesity also are more likely to engage in no leisure time activity. 
+            </p>
+
+            <div id="raceEthDrop">
+                <form class="form">
+                    <label>Question</label>
+                    <select id="raceEth" class="select-control2">
+                        <option value="veg">% who consume vegetables less than once a day</option>
+                        <option value="nophys">% who engage in no leisure physical activity</option>
+                        <option value="obese">% of adults > 18 yrs who are obese</option>
+                        <option value="overweight">% of adults > 18 yrs who are overweight</option>
+                        <option value="activity">% who achieve at least 150 mins/week of moderate aerobic physical activity or 75 mins/week of vigorous aerobic activity</option>
+                    </select>
+                </form>
+            </div>
+
+             <!--- here is where to put graph  -->
+            <div id="racechart-area"></div>
+            <!--- here is where to put legend -->
+            <div id="racelegend-area"></div>
+
+            <hr/>
+            <h3><b>Easy Eating</b></h3>
+            <p class="story">
+                Fast food restaurants continue to proliferate in the US, giving people
+                more access to unhealthy food. While there is no absolute truth to the 
+                correlation between fast food restaurants and the obesity rates throughout 
+                the years, these restaurants do nothing to help the growing obesity crisis
+                and can only contribute to it. Highlight a point on the chart to see the 
+                exact values.
+            </p>
             <div id="vega-area"></div>
+
+            <hr/>
+            <h3><b>Obesity Among All</b></h3>
+            <p class="story">
+                America stands out in the world as a "melting pot" of vairous cultures,
+                ethnicities, and races. Yet it seems no one can avoid the threat of obesity,
+                regardless of who or where you are. In the following map, you may select between 
+                various ethnicities and age groups to see where in the US are certain groups 
+                affected most by obesity. Note that, based on denser ethnic populations in certain 
+                states, values may differ on the average obesity for said state.
+            </p>
+            <div id="socio-drop">
+                <form class="form">
+                    <label>Ethnicity/Age</label>
+                    <select id="eth" class="select-control3">
+                        <option value="Whites">White</option>
+                        <option value="Blacks">Black</option>
+                        <option value="Hispanics">Hispanic</option>
+                        <option value="Asians">Asian</option>
+                        <option value="Natives">Native American/Alaskan</option>
+                        <option value="Pacific-Islanders">Pacific Islander/Hawaiian</option>
+                        <option value="Old">Age 65 and older</option>
+                        <option value="Young">Age 18 and Younger</option>
+                    </select>
+                </form>
+            </div>
+            <div id="soc-area"></div>
+
+            <hr/>
+
+            <div id="adv">
+                <h3><b>What America Has to Say</b></h3>
+                <p class="story">
+                    Not a soul in the country has not seen the consequences and harm of obesity 
+                    on a human being. People around the country work to advocate for healthier 
+                    lifestyles for people of all ages. One noteworthy figure is previous First Lady 
+                    Michelle Obama.
+                </p>
+                <a href="https://letsmove.obamawhitehouse.archives.gov/">
+                    <img src="img/michelle.jpg" style="width:500px;height:300px">
+                </a>
+                <p class="story">
+                    Michelle Obama is a renown spokesperson who battled the growing obesity epidemic.
+                    She is known for advocating for massive overhauls to schools and their lunches, 
+                    making healthier and more affordable food options available to students around 
+                    the country. She spearheaded the "Let's Move!" movement and is still involved with 
+                    helping the country become a healthier place.
+                </p>
+                <h4>"Do we settle for the world as it is? Or do we work for the world as it should be?"</h4>
+                <p class="quote">-Michelle Obama</p>
+
+                <br/>
+
+                <p class="story">
+                    A group that has been a long-time force in obesity advocacy in America is the 
+                    Overview of Advocacy in Obesity (OAC). The non-profit group's goal is to educate citizens, help 
+                    victims in finding treatment, and inspiring people to take up in challenging 
+                    obesity in their lives. 
+                </p>
+                <a href="https://www.obesityaction.org/action-through-advocacy/overview-of-advocacy-in-obesity/what-we-advocate-for/">
+                    <img src="img/oac.jpg" style="width:500px;height:300px">
+                </a>
+                <h4>
+                    "The voice of those affected is often unheard and unrecognized.
+                    The OAC Community helps these voices join together and speak loudly.""
+                </h4>
+                <p class="quote">-OAC</p>
+            </div>
+
             <p>(Data taken from the Behavioral Risk Factor Surveillance System and the IBIS World Industry Report)</p>
 
         </div>
+    </div>
         <script src="js/d3.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega@5.7.2"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.10"></script>
@@ -47,6 +162,9 @@
         <script src="js/topojson.min.js"></script>
         <script src="js/geo.js"></script>
         <script src="js/helper.js"></script>
-        
+        <script src="js/barchart.js"></script>
+        <script src="js/socio.js"></script>
+
+
     </body>
 </html>
